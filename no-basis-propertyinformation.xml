@@ -1,0 +1,177 @@
+<StructureDefinition xmlns="http://hl7.org/fhir">
+  <id value="no-basis-propertyinformation" />
+  <meta>
+    <versionId value="1" />
+    <lastUpdated value="2018-06-13T12:21:26.15+00:00" />
+  </meta>
+  <url value="http://ehelse.no/fhir/StructureDefinition/no-basis-propertyinformation" />
+  <version value="0.3" />
+  <name value="no-basis-propertyinformation" />
+  <status value="draft" />
+  <date value="2018-09-06" />
+  <description value="This basis extension describes information identifying norwegian real property." />
+  <fhirVersion value="3.0.1" />
+  <kind value="complex-type" />
+  <abstract value="false" />
+  <contextType value="datatype" />
+  <context value="Address" />
+  <type value="Extension" />
+  <baseDefinition value="http://hl7.org/fhir/StructureDefinition/Extension" />
+  <derivation value="constraint" />
+  <differential>
+    <element id="Extension">
+      <path value="Extension" />
+      <short value="real property identification" />
+      <definition value="Additional information identifying norwegian real property." />
+    </element>
+    <element id="Extension.extension">
+      <path value="Extension.extension" />
+      <slicing>
+        <discriminator>
+          <type value="value" />
+          <path value="url" />
+        </discriminator>
+        <rules value="open" />
+      </slicing>
+    </element>
+    <element id="Extension.extension:cadastralUnitNumber">
+      <path value="Extension.extension" />
+      <sliceName value="cadastralUnitNumber" />
+      <short value="cadastral unit number" />
+      <definition value="Identification of a real property in Norway is defined using gårdsnummer, bruksnummer and kommunenummer. In addition real property can be rented out, the area of the real property that is rented is measured and is further identified by its festenummer. In addition some real property is split into sections identified by its seksjonsnummer. Gårdsnummer is called Cadastral unit number in English." />
+      <comment value="Gårdsnummer" />
+      <alias value="cadastral unit number" />
+      <alias value="gårdsnummer" />
+      <max value="1" />
+    </element>
+    <element id="Extension.extension:cadastralUnitNumber.url">
+      <path value="Extension.extension.url" />
+      <fixedUri value="cadastralUnitNumber" />
+    </element>
+    <element id="Extension.extension:cadastralUnitNumber.value[x]:valueInteger">
+      <path value="Extension.extension.valueInteger" />
+      <sliceName value="valueInteger" />
+      <type>
+        <code value="integer" />
+      </type>
+    </element>
+    <element id="Extension.extension:propertyUnitNumber">
+      <path value="Extension.extension" />
+      <sliceName value="propertyUnitNumber" />
+      <short value="Property unit number" />
+      <definition value="Identification of a real property in Norway is defined using gårdsnummer, bruksnummer and kommunenummer. In addition real property can be rented out, the area of the real property that is rented is measured and is further identified by its festenummer. In addition some real property is split into sections identified by its seksjonsnummer. Bruksnummer is called Property unit number in English." />
+      <comment value="bruksnummer" />
+      <alias value="Property unit number" />
+      <alias value="bruksnummer" />
+      <max value="1" />
+    </element>
+    <element id="Extension.extension:propertyUnitNumber.url">
+      <path value="Extension.extension.url" />
+      <fixedUri value="propertyUnitNumber" />
+    </element>
+    <element id="Extension.extension:propertyUnitNumber.value[x]:valueInteger">
+      <path value="Extension.extension.valueInteger" />
+      <sliceName value="valueInteger" />
+      <type>
+        <code value="integer" />
+      </type>
+    </element>
+    <element id="Extension.extension:leaseholdNumber">
+      <path value="Extension.extension" />
+      <sliceName value="leaseholdNumber" />
+      <short value="Leasehold number" />
+      <definition value="Identification of a real property in Norway is defined using gårdsnummer, bruksnummer and kommunenummer. In addition real property can be rented out, the area of the real property that is rented is measured and is further identified by its festenummer. Festenummer is called Leasehold number in english." />
+      <comment value="Festenummer" />
+      <alias value="Leasehold number" />
+      <alias value="Festenummer" />
+    </element>
+    <element id="Extension.extension:leaseholdNumber.url">
+      <path value="Extension.extension.url" />
+      <fixedUri value="leaseholdNumber" />
+    </element>
+    <element id="Extension.extension:leaseholdNumber.value[x]:valueInteger">
+      <path value="Extension.extension.valueInteger" />
+      <sliceName value="valueInteger" />
+      <type>
+        <code value="integer" />
+      </type>
+    </element>
+    <element id="Extension.extension:condominiumUnitNumber">
+      <path value="Extension.extension" />
+      <sliceName value="condominiumUnitNumber" />
+      <short value="Condominium unit number" />
+      <definition value="Identification of a real property in Norway is defined using gårdsnummer, bruksnummer and kommunenummer. In addition some real property is split into sections identified by its seksjonsnummer. Seksjonsnummer is called Condominium unit number in English." />
+      <comment value="Seksjonsnummer" />
+      <alias value="Condominium unit number" />
+      <alias value="seksjonsnummer" />
+    </element>
+    <element id="Extension.extension:condominiumUnitNumber.url">
+      <path value="Extension.extension.url" />
+      <fixedUri value="condominiumUnitNumber" />
+    </element>
+    <element id="Extension.extension:condominiumUnitNumber.value[x]:valueInteger">
+      <path value="Extension.extension.valueInteger" />
+      <sliceName value="valueInteger" />
+      <type>
+        <code value="integer" />
+      </type>
+    </element>
+    <element id="Extension.extension:municipality">
+      <path value="Extension.extension" />
+      <sliceName value="municipality" />
+      <short value="Identification of the Municipality" />
+      <definition value="The norwegian kommune identifies an administrative geographic unit in Norway called kommune by a predefined number and its official name." />
+      <alias value="Kommune" />
+    </element>
+    <element id="Extension.extension:municipality.url">
+      <path value="Extension.extension.url" />
+      <fixedUri value="municipality" />
+    </element>
+    <element id="Extension.extension:municipality.value[x]:valueCoding">
+      <path value="Extension.extension.valueCoding" />
+      <sliceName value="valueCoding" />
+      <short value="Kommunenummer according to CodeSystem" />
+      <definition value="The norwegian kommunenummer identifies an administrative geographic unit in Norway called kommune by a predefined number. The number should be coded according to CodeSystem Kommunenummer og regionale spesialkoder (OID=3402)." />
+      <type>
+        <code value="Coding" />
+      </type>
+      <binding>
+        <strength value="required" />
+        <description value="Kommunenummer" />
+        <valueSetUri value="urn:oid:2.16.578.1.12.4.1.1.3402" />
+      </binding>
+    </element>
+    <element id="Extension.extension:municipality.value[x]:valueCoding.system">
+      <path value="Extension.extension.valueCoding.system" />
+      <short value="Kommunenummer CodeSystem" />
+      <definition value="The identification of the kommunenummer CodeSystem urn:oid:2.16.578.1.12.4.1.1.3402" />
+      <fixedUri value="urn:oid:2.16.578.1.12.4.1.1.3402" />
+    </element>
+    <element id="Extension.extension:municipality.value[x]:valueCoding.code">
+      <path value="Extension.extension.valueCoding.code" />
+      <short value="Municipality number" />
+      <definition value="The norwegian kommunenummer identifies an administrative geographic unit in Norway called kommune by a predefined number. The number should be coded according to CodeSystem Kommunenummer og regionale spesialkoder (OID=3402)." />
+      <alias value="Municipality number" />
+      <alias value="kommunenummer" />
+    </element>
+    <element id="Extension.extension:municipality.value[x]:valueCoding.display">
+      <extension url="http://hl7.org/fhir/StructureDefinition/elementdefinition-translatable">
+        <valueBoolean value="true" />
+      </extension>
+      <path value="Extension.extension.valueCoding.display" />
+      <short value="The name of the municipality" />
+      <definition value="The norwegian kommune identifies an administrative geographic unit in Norway called kommune by its official name." />
+      <alias value="kommunenavn" />
+      <alias value="Municipality" />
+      <min value="1" />
+    </element>
+    <element id="Extension.url">
+      <path value="Extension.url" />
+      <fixedUri value="http://ehelse.no/fhir/StructureDefinition/no-basis-propertyinformation" />
+    </element>
+    <element id="Extension.value[x]">
+      <path value="Extension.value[x]" />
+      <max value="0" />
+    </element>
+  </differential>
+</StructureDefinition>

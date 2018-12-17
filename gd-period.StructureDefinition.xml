@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<StructureDefinition xmlns="http://hl7.org/fhir">
+  <url value="http://ehelse.no/fhir/StructureDefinition/gd-period" />
+  <name value="gd-period" />
+  <status value="draft" />
+  <fhirVersion value="3.0.1" />
+  <kind value="complex-type" />
+  <abstract value="false" />
+  <contextType value="datatype" />
+  <context value="CodeableConcept" />
+  <type value="Extension" />
+  <baseDefinition value="http://hl7.org/fhir/StructureDefinition/Extension" />
+  <derivation value="constraint" />
+  <differential>
+    <element id="Extension.url">
+      <path value="Extension.url" />
+      <fixedUri value="http://ehelse.no/fhir/StructureDefinition/gd-period" />
+    </element>
+    <element id="Extension.value[x]:valuePeriod">
+      <path value="Extension.valuePeriod" />
+      <sliceName value="valuePeriod" />
+      <type>
+        <code value="Period" />
+      </type>
+    </element>
+  </differential>
+</StructureDefinition>

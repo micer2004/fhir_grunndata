@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="utf-8"?>
+<StructureDefinition xmlns="http://hl7.org/fhir">
+  <url value="http://helsepunkt.no/fhir/StructureDefinition/gd-Person" />
+  <version value="0.1" />
+  <name value="gd-Person" />
+  <status value="draft" />
+  <publisher value="Direktoratet for e-helse" />
+  <fhirVersion value="3.0.1" />
+  <kind value="resource" />
+  <abstract value="false" />
+  <type value="Person" />
+  <baseDefinition value="http://hl7.org/fhir/StructureDefinition/Person" />
+  <derivation value="constraint" />
+  <differential>
+    <element id="Person.identifier">
+      <path value="Person.identifier" />
+      <slicing>
+        <discriminator>
+          <type value="value" />
+          <path value="system" />
+        </discriminator>
+        <rules value="open" />
+      </slicing>
+      <min value="1" />
+    </element>
+    <element id="Person.identifier:FNR">
+      <path value="Person.identifier" />
+      <sliceName value="FNR" />
+    </element>
+    <element id="Person.identifier:FNR.system">
+      <path value="Person.identifier.system" />
+      <short value="The actual Fødselsnummer" />
+      <definition value="The Norwegian Fødselsnummer" />
+      <fixedUri value="urn:oid:2.16.578.1.12.4.1.4.1" />
+    </element>
+    <element id="Person.identifier:FNR.value">
+      <path value="Person.identifier.value" />
+      <short value="The actual Fødselsnummer" />
+      <definition value="The Norwegian Fødselsnummer" />
+      <alias value="Fødselsnummer" />
+      <example>
+        <label value="Fødselsnummer" />
+        <valueString value="13057444850" />
+      </example>
+    </element>
+    <element id="Person.identifier:DNR">
+      <path value="Person.identifier" />
+      <sliceName value="DNR" />
+    </element>
+    <element id="Person.identifier:DNR.system">
+      <path value="Person.identifier.system" />
+      <fixedUri value="urn:oid:2.16.578.1.12.4.1.4.2" />
+    </element>
+    <element id="Person.name">
+      <path value="Person.name" />
+      <type>
+        <code value="HumanName" />
+        <profile value="http://ehelse.no/fhir/StructureDefinition/no-basis-HumanName" />
+      </type>
+    </element>
+    <element id="Person.address">
+      <path value="Person.address" />
+      <type>
+        <code value="Address" />
+        <profile value="http://ehelse.no/fhir/StructureDefinition/no-basis-Address" />
+      </type>
+    </element>
+  </differential>
+</StructureDefinition>
