@@ -1,0 +1,34 @@
+<CodeSystem>
+    <id value="gd-person-parentalresponsibilitycustody-v05.codesystem" />
+    <meta>
+        <versionId value="1" />
+        <lastUpdated value="2018-10-17T00:00:00.000+00:00" />
+    </meta>
+    <url value="http://ehelse.no/fhir/CodeSystem/gd-person-parentalresponsibilitycustody-v05" />
+    <version value="5.0.0" />
+    <name value="gd-person-parentalresponsibilitycustody-v05" />
+    <status value="draft" />
+    <date value="2018-10-17T00:00:00.000+00:00" />
+    <publisher value="Skatteetaten" />
+    <content value="complete" />
+    <concept>
+        <code value="felles" />
+        <display value="Felles" />
+    </concept>
+    <concept>
+        <code value="mor" />
+        <display value="Mor" />
+    </concept>
+    <concept>
+        <code value="far" />
+        <display value="Far" />
+    </concept>
+    <concept>
+        <code value="medmor" />
+        <display value="Medmor" />
+    </concept>
+    <concept>
+        <code value="andre" />
+        <display value="Andre" />
+    </concept>
+</CodeSystem>

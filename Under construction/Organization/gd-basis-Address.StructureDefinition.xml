@@ -1,0 +1,133 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<StructureDefinition xmlns="http://hl7.org/fhir">
+  <url value="http://ehelse.no/fhir/StructureDefinition/gd-basis-Address" />
+  <version value="0.1" />
+  <name value="gd-basis-Address" />
+  <status value="draft" />
+  <date value="2018-06-12" />
+  <description value="Utkast til norsk versjon av adresse-komponent" />
+  <fhirVersion value="3.0.1" />
+  <kind value="complex-type" />
+  <abstract value="false" />
+  <type value="Address" />
+  <baseDefinition value="http://hl7.org/fhir/StructureDefinition/Address" />
+  <derivation value="constraint" />
+  <differential>
+    <element id="Address">
+      <path value="Address" />
+      <short value="An address expressed using postal conventions (as opposed to GPS or other location definition formats)" />
+      <definition value="An address expressed using postal conventions (as opposed to GPS or other location definition formats).  This data type may be used to convey addresses for use in delivering mail as well as for visiting locations which might not be valid for mail delivery.  There are a variety of postal address formats defined around the world." />
+      <comment value="Note: address is for postal addresses, not physical locations." />
+      <base>
+        <path value="Element" />
+        <min value="0" />
+        <max value="*" />
+      </base>
+      <mapping>
+        <identity value="v2" />
+        <map value="XAD" />
+      </mapping>
+      <mapping>
+        <identity value="rim" />
+        <map value="AD" />
+      </mapping>
+      <mapping>
+        <identity value="servd" />
+        <map value="Address" />
+      </mapping>
+    </element>
+    <element id="Address.line.extension">
+      <path value="Address.line.extension" />
+      <slicing>
+        <discriminator>
+          <type value="value" />
+          <path value="url" />
+        </discriminator>
+        <rules value="open" />
+      </slicing>
+    </element>
+    <element id="Address.line.extension:streetName">
+      <path value="Address.line.extension" />
+      <sliceName value="streetName" />
+      <min value="0" />
+      <max value="1" />
+      <type>
+        <code value="Extension" />
+        <profile value="http://hl7.org/fhir/StructureDefinition/iso21090-ADXP-streetName" />
+      </type>
+    </element>
+    <element id="Address.line.extension:houseNumber">
+      <path value="Address.line.extension" />
+      <sliceName value="houseNumber" />
+      <min value="0" />
+      <max value="1" />
+      <type>
+        <code value="Extension" />
+        <profile value="http://hl7.org/fhir/StructureDefinition/iso21090-ADXP-houseNumber" />
+      </type>
+    </element>
+    <element id="Address.line.extension:buildingNumberSuffix">
+      <path value="Address.line.extension" />
+      <sliceName value="buildingNumberSuffix" />
+      <min value="0" />
+      <max value="1" />
+      <type>
+        <code value="Extension" />
+        <profile value="http://hl7.org/fhir/StructureDefinition/iso21090-ADXP-buildingNumberSuffix" />
+      </type>
+    </element>
+    <element id="Address.city">
+      <path value="Address.city" />
+      <short value="By" />
+    </element>
+    <element id="Address.district">
+      <path value="Address.district" />
+      <short value="Kommune" />
+    </element>
+    <element id="Address.district.extension">
+      <path value="Address.district.extension" />
+      <slicing>
+        <discriminator>
+          <type value="value" />
+          <path value="url" />
+        </discriminator>
+        <rules value="open" />
+      </slicing>
+    </element>
+    <element id="Address.district.extension:districtCode">
+      <path value="Address.district.extension" />
+      <sliceName value="districtCode" />
+      <min value="0" />
+      <max value="1" />
+      <type>
+        <code value="Extension" />
+        <profile value="https://ehelse.no/Code/districtCode" />
+      </type>
+    </element>
+    <element id="Address.state">
+      <path value="Address.state" />
+      <short value="Fylke" />
+      <definition value="Representerer fylker i norge" />
+    </element>
+    <element id="Address.state.extension">
+      <path value="Address.state.extension" />
+      <slicing>
+        <discriminator>
+          <type value="value" />
+          <path value="url" />
+        </discriminator>
+        <rules value="open" />
+      </slicing>
+    </element>
+    <element id="Address.state.extension:stateCode">
+      <path value="Address.state.extension" />
+      <sliceName value="stateCode" />
+      <min value="0" />
+      <max value="1" />
+      <type>
+        <code value="Extension" />
+        <profile value="https://ehelse.no/Code/fylkeCode" />
+      </type>
+    </element>
+  </differential>
+</StructureDefinition>

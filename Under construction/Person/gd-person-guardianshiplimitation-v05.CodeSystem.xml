@@ -1,0 +1,86 @@
+<CodeSystem>
+    <id value="gd-person-guardianshipLimitation-v05.codesystem" />
+    <meta>
+        <versionId value="1" />
+        <lastUpdated value="2018-10-17T00:00:00.000+00:00" />
+    </meta>
+    <url value="http://ehelse.no/fhir/CodeSystem/gd-person-guardianshipLimitation-v05.codesystem" />
+    <version value="5.0.0" />
+    <name value="gd-person-guardianshipLimitation-v05.codesystem" />
+    <status value="draft" />
+    <date value="2018-10-17T00:00:00.000+00:00" />
+    <publisher value="Skatteetaten" />
+    <content value="complete" />
+    <concept>
+        <code value="personligeOgØkonomiskeInteresser" />
+        <display value="Personlige og økonomiske interesser" />
+    </concept>
+    <concept>
+        <code value="økonomiskeInteresser" />
+        <display value="Økonomiske interesser" />
+    </concept>
+    <concept>
+        <code value="personligeInteresser" />
+        <display value="Personlige interesser" />
+    </concept>
+    <concept>
+        <code value="etterAnnenLovgivning" />
+        <display value="Etter annen lovgivning" />
+    </concept>
+    <concept>
+        <code value="rettsligHandleevne" />
+        <display value="Rettslig handleevne" />
+    </concept>
+    <concept>
+        <code value="skifteAvDødsbo" />
+        <display value="Skifte av dødsbo" />
+    </concept>
+    <concept>
+        <code value="rettsak" />
+        <display value="Rettsak" />
+    </concept>
+    <concept>
+        <code value="boligsalg" />
+        <display value="Boligssalg" />
+    </concept>
+    <concept>
+        <code value="separasjonEllerSkillsmissebo" />
+        <display value="Separasjon eller skillsmissebo" />
+    </concept>
+    <concept>
+        <code value="utskrivingFraInstitusjon" />
+        <display value="Utskriving fra institusjon" />
+    </concept>
+    <concept>
+        <code value="utleieEllerOppsigelseAvBolig" />
+        <display value="Utleie eller oppsigelse av bolig" />
+    </concept>
+    <concept>
+        <code value="vergeEtterHelseOgOmsorgstjenesteloven" />
+        <display value="Verge etter helse- og omsorgstjenesteloven" />
+    </concept>
+    <concept>
+        <code value="heleEllerDelerAvForeldreansvaret" />
+        <display value="Hele eller deler av foreldreansvaret" />
+    </concept>
+    <concept>
+        <code value="straffesak" />
+        <display value="Straffesak" />
+    </concept>
+    <concept>
+        <code value="sivilSak" />
+        <display value="Sivil sak" />
+    </concept>
+    <concept>
+        <code value="arvUskifteEllerSkifteAvDødsbo" />
+        <display value="Arv uskifte eller skifte av dødsbo" />
+    </concept>
+    <concept>
+        <code value="vergensLånAvDenMindreårige" />
+        <display value="Vergens lån av den midreårige" />
+    </concept>
+    <concept>
+        <code value="annet" />
+        <display value="Annet" />
+    </concept>
+</CodeSystem>

@@ -1,0 +1,54 @@
+<CodeSystem>
+    <id value="gd-person-guardianship-v05.codesystem" />
+    <meta>
+        <versionId value="1" />
+        <lastUpdated value="2018-10-17T00:00:00.000+00:00" />
+    </meta>
+    <url value="http://ehelse.no/fhir/CodeSystem/gd-person-guardianship-v05.codesystem" />
+    <version value="5.0.0" />
+    <name value="gd-person-guardianship-v05.codesystem" />
+    <status value="draft" />
+    <date value="2018-10-17T00:00:00.000+00:00" />
+    <publisher value="Skatteetaten" />
+    <content value="complete" />
+    <concept>
+        <code value="voksen" />
+        <display value="Voksen" />
+    </concept>
+    <concept>
+        <code value="ensligMindreårigAsylsøkerEllerFlyktning" />
+        <display value="Enslig mindreårig asylsøker eller flyktning" />
+    </concept>
+    <concept>
+        <code value="mindreårigMedFormue" />
+        <display value="Mindreårig med formue" />
+    </concept>
+    <concept>
+        <code value="mindreårigUtenFormue" />
+        <display value="Mindreårig uten formue" />
+    </concept>
+    <concept>
+        <code value="bestyringssak" />
+        <display value="Bestyringssak" />
+    </concept>
+    <concept>
+        <code value="settevergemålForMindreårigUtenFormue" />
+        <display value="Settevergemål for mindreårig uten formue" />
+    </concept>
+    <concept>
+        <code value="midlertidigVergemålForMindreårigUtenFormue" />
+        <display value="Midlertidig vergemål for mindreårig uten formue" />
+    </concept>
+    <concept>
+        <code value="enkeltvedtakForMindreårigUtenFormue" />
+        <display value="Enkelt vedtak for mindreårig uten formue" />
+    </concept>
+    <concept>
+        <code value="fortsattForvaltning" />
+        <display value="Fortsatt forvaltning" />
+    </concept>
+    <concept>
+        <code value="særskiltForvaltning" />
+        <display value="Særskilt forvaltning" />
+    </concept>
+</CodeSystem>

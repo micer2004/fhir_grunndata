@@ -1,0 +1,42 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<StructureDefinition xmlns="http://hl7.org/fhir">
+  <url value="http://ehelse.no/fhir/StructureDefinition/gd-basis-Organization" />
+  <version value="0.1" />
+  <name value="gd-basis-Organization" />
+  <status value="draft" />
+  <date value="2018-06-12" />
+  <publisher value="Direktoratet for e-helse" />
+  <fhirVersion value="3.0.1" />
+  <kind value="resource" />
+  <abstract value="false" />
+  <type value="Organization" />
+  <baseDefinition value="http://hl7.org/fhir/StructureDefinition/Organization" />
+  <derivation value="constraint" />
+  <differential>
+    <element id="Organization.identifier">
+      <path value="Organization.identifier" />
+      <slicing>
+        <discriminator>
+          <type value="type" />
+          <path value="system" />
+        </discriminator>
+        <rules value="open" />
+      </slicing>
+    </element>
+    <element id="Organization.identifier:organizationNumber">
+      <path value="Organization.identifier" />
+      <sliceName value="organizationNumber" />
+    </element>
+    <element id="Organization.identifier:organizationNumber.system">
+      <path value="Organization.identifier.system" />
+      <fixedUri value="https://ehelse.no/officialIDs/OrganizationNumber" />
+    </element>
+    <element id="Organization.address">
+      <path value="Organization.address" />
+      <type>
+        <code value="Address" />
+        <profile value="http://ehelse.no/fhir/StructureDefinition/gd-basis-Address" />
+      </type>
+    </element>
+  </differential>
+</StructureDefinition>

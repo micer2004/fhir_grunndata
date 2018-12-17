@@ -1,0 +1,54 @@
+<CodeSystem>
+    <id value="gd-person-maritalstatus-v05.codesystem" />
+    <meta>
+        <versionId value="1" />
+        <lastUpdated value="2018-10-17T00:00:00.000+00:00" />
+    </meta>
+    <url value="http://ehelse.no/fhir/CodeSystem/gd-person-maritalstatus-v05.codesystem" />
+    <version value="5.0.0" />
+    <name value="gd-person-maritalstatus-v05.codesystem" />
+    <status value="draft" />
+    <date value="2018-10-17T00:00:00.000+00:00" />
+    <publisher value="Skatteetaten" />
+    <content value="complete" />
+    <concept>
+        <code value="uoppgitt" />
+        <display value="Uoppgitt" />
+    </concept>
+    <concept>
+        <code value="ugift" />
+        <display value="Ugift" />
+    </concept>
+    <concept>
+        <code value="gift" />
+        <display value="Gift" />
+    </concept>
+    <concept>
+        <code value="enkeEllerEnkemann" />
+        <display value=">Enke eller enkemann" />
+    </concept>
+    <concept>
+        <code value="skilt" />
+        <display value="Skilt" />
+    </concept>
+    <concept>
+        <code value="separert" />
+        <display value="Separert" />
+    </concept>
+    <concept>
+        <code value="registrertPartner" />
+        <display value="Registert partner" />
+    </concept>
+    <concept>
+        <code value="separertPartner" />
+        <display value="Separert partner" />
+    </concept>
+    <concept>
+        <code value="skiltPartner" />
+        <display value="Skilt partner" />
+    </concept>
+    <concept>
+        <code value="gjenlevende_partner" />
+        <display value="Gjenlevende partner" />
+    </concept>
+</CodeSystem>
